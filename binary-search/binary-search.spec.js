@@ -21,5 +21,15 @@ describe('Binary Search', () => {
 	});
 
 	//(OPTIONAL) WRITE YOUR OWN TESTS HERE. Include >=1 edge case :)
-
+    it('returns  false if empty array',()=>{
+		expect(binarySearch([], 4)).to.equal(false)
+	})
+	it('returns  the value if array of one if matches the target value',()=>{
+		expect(binarySearch([3], 3)).to.equal(true)
+		expect(binarySearch([6], 3)).to.equal(false)
+	})
+	it('returns value in array of two matches the  target value',()=>{
+		expect(binarySearch([3,6], 3)).to.equal(true)
+		expect(binarySearch([6,9],3)).to.equal(false)
+	})
 });
